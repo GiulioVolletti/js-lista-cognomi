@@ -8,7 +8,7 @@ console.log(cognomeUtente);
 // inserirlo in un array con altri cognomi (Es: 'Pesce', ‘Castenetto’, 'Passaro', 'Grimaldi', ‘Rossi’, ‘Verdi’, ‘Bianchi’).
 
 // lista cognomi
-var listaCognomi = ["pinco", "rossi", "verdi", "bianchi"];
+var listaCognomi = ["Pinco", "Rossi", "Verdi", "Bianchi", "Palazzo"];
 console.log(listaCognomi);
 // inserimento in lista
 listaCognomi.push(cognomeUtente)
@@ -24,6 +24,7 @@ for (var i = 0; i < listaCognomi.length; i++) {
   // console.log(listaCognomi[i]);
   while (listaCognomi[i] == cognomeUtente) {
     console.log(cognomeUtente + " si trova in posizione: " + [++i]);
+    document.getElementById('nome_posizione').innerHTML = cognomeUtente + " si trova in posizione: " + [i];
     i++;
   }
 }
