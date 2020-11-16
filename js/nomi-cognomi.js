@@ -19,10 +19,17 @@ console.log(listaCognomi);
 listaCognomi.sort()
 console.log(listaCognomi);
 // Scrivi anche la posizione "umana" della lista in cui il nuovo utente si trova.
+var z = 0
+while (z < listaCognomi.length) {
+  if (listaCognomi[z] == cognomeUtente) {
+    console.log(cognomeUtente + " si trova in posizione: " + [++z]);
+  }
+  z++;
+}
 
 for (var i = 0; i < listaCognomi.length; i++) {
   // console.log(listaCognomi[i]);
-  while (listaCognomi[i] == cognomeUtente) {
+  if (listaCognomi[i] == cognomeUtente) {
     console.log(cognomeUtente + " si trova in posizione: " + [++i]);
     document.getElementById('nome_posizione').innerHTML = cognomeUtente + " si trova in posizione: " + [i];
     i++;
